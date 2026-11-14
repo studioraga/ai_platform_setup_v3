@@ -28,3 +28,7 @@ Before push, check `git ls-files` for `.env`, private keys, reports, wheels, `no
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05 development branch
+
+Start `feature/r05-extended-sdk-compatibility` from main after recording the baseline merge. Stage only comparator source, self-tests and reviewed documentation; do not stage historical wheel files or generated JSON under `reports/`. Run existing source/Git audits and independent secret review; push a feature branch for manual review. Never merge to Governance or tag its production release.

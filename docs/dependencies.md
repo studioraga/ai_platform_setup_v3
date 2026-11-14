@@ -32,3 +32,7 @@ Official reference sites: https://docs.docker.com/engine/install/ubuntu/ ; https
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05-A dependency scope
+
+The static AST auditor uses only Python 3.12 standard library (`ast`, `zipfile`, `hashlib`, `json`); synthetic-wheel tests require the existing pytest dependency. Runtime wheel consumers for subsequent phases are separately installed and **not vendored**. Python package metadata version 0.29.0 vs historical module `__version__` 0.21.1 is a known provenance discrepancy. See [R05 specification](r05/R05_EXTENDED_COMPATIBILITY_SPEC.md).

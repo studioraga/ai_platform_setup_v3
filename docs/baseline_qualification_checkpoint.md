@@ -96,6 +96,10 @@ reproducible evidence, and independent acceptance.
 
 ## Git acceptance
 
-Baseline Git commit: NOT YET RECORDED
-Remote push: NOT YET VERIFIED
-Fresh-clone acceptance: PENDING
+Baseline Git source commit: `66ac5b19a7a1f74f64f1e9668739abae0d6375f7` (owner-confirmed)
+Remote main merge commit: `3f429aacb889f55521671cb013a73ed5550d90be` (owner-confirmed)
+Fresh-machine acceptance: PENDING
+
+## Confirmed Git baseline provenance (2026-11-14)
+
+The repository owner reports that GitHub `origin/main` now points to merge commit `3f429aacb889f55521671cb013a73ed5550d90be`, merging `66ac5b19a7a1f74f64f1e9668739abae0d6375f7` via PR #1. This supersedes the historical pre-push state above. Fresh-*machine* qualification and R05 extended acceptance remain separate gates.

@@ -43,7 +43,7 @@ Legacy patch notes and runbooks remain historical records; this README and docs 
 
 Node1 source validation and ShellCheck, Python (5 tests), React build/lint (3 component tests), Playwright (1 E2E), PostgreSQL/Redis/Qdrant practice smoke, Terraform offline validation/plan, Helm lint/render, and the 45/45 local evidence manifest passed in the supplied logs. Docker Engine 29.5.1 was recovered by starting the existing system daemon; the three named practice containers and their named volumes were **reused, not recreated**.
 
-The preparation directory was initialized with `git init -b main`, but **no commit or push happened**: `git add -n` was a dry run, followed immediately by a failed `git commit` with no staged files. Before the real initial commit, exclude downloaded tool binaries and local backup scripts, run a staged-index audit, inspect and scan the diff, and push only to an authorized remote. See [Git runbook](docs/git_release.md).
+**Historical note:** the original preparation checkout initially had no Git commit after `git add -n`. This was corrected during migration. On 2026-11-14, PR #1 merged source-only baseline commit `66ac5b19a7a1f74f64f1e9668739abae0d6375f7` into `main` at `3f429aacb889f55521671cb013a73ed5550d90be` (as confirmed by the repository owner). Subsequent engineering work must use a new feature branch; see [Git runbook](docs/git_release.md).
 
 R05: both Governance v0.29.0 and corrected v0.30.0 wheel consumers previously passed 7 shared tests; full public API, class-method, schema, exception and pre-1.0 SemVer review remains open. Requirements R01–R16 are **16 NOT_RUN**. No M30 production freeze is approved.
 
@@ -54,3 +54,7 @@ R05: both Governance v0.29.0 and corrected v0.30.0 wheel consumers previously pa
 ## Repository provenance
 
 [Repository migration](docs/repository_migration.md) describes the migration into the existing Studio Raga GitHub repository and its acceptance boundaries.
+
+## R05 post-baseline engineering increment
+
+[R05 extended SDK compatibility engineering specification](docs/r05/R05_EXTENDED_COMPATIBILITY_SPEC.md) defines phase-by-phase static API inventory, public-export review, dual-wheel runtime contracts, serialization/exception/denial tests and a **proposed** pre-1.0 policy requiring owner approval. Do not treat R05-A discovery results as final compatibility or production authorization.

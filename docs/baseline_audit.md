@@ -29,3 +29,7 @@ The later Node1 run corrected the earlier 35/45 hash mismatch: **45 selected / 4
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05-A qualification boundary
+
+Offline static wheel comparison can show unchanged syntactic signatures and additive module declarations; it cannot establish full compatibility or prove approved public exports. Reviewer disposition is required for all contract classifications. The original 45-file historical manifest is independent of R05-A reports.

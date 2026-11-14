@@ -48,3 +48,7 @@ Provided logs show installed cloud tools and offline IaC gates pass; reconstruct
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05-A static discovery (not compatibility acceptance)
+
+Run `python3 -m pytest -q tests/r05/test_public_api_inventory.py` and the offline wheel comparison from [R05 specification](r05/R05_EXTENDED_COMPATIBILITY_SPEC.md). Do not run SDK package imports in this static comparator. Preserve wheel digests and reports outside Git. The complete R05 compatibility decision remains PENDING.

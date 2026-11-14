@@ -35,3 +35,7 @@ Check stages separately. Do not treat `git add -n` output as proof of staging or
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05 extended audit scripts
+
+`scripts/qualification/audit_r05_public_api.py`: static AST inventory for public-candidate methods, fields and re-export syntax; emits JSON under ignored `reports/r05-extended/`. `tests/r05/test_public_api_inventory.py`: self-tests with synthetic wheels (no third-party package required beyond pytest). See [R05 specification](r05/R05_EXTENDED_COMPATIBILITY_SPEC.md).

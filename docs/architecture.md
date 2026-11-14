@@ -52,3 +52,7 @@ Node1 Docker Engine 29.5.1 was stopped and recovered. Compose `start` reused exi
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05 boundary extension
+
+The R05-A AST comparator reads ZIP wheel files as untrusted input and **does not import or execute the Governance package**. B–D validation uses separate isolated wheel consumers and produces local, ignored evidence. Production agent authorization and Governance M30 remain outside this preparation repository. [R05 phases](r05/R05_EXTENDED_COMPATIBILITY_SPEC.md).

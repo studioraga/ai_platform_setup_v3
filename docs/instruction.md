@@ -26,3 +26,7 @@ The latest local service smoke, Terraform and Helm commands passed. Do not re-ru
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05-A start after Git baseline
+
+Create a dedicated `feature/r05-extended-sdk-compatibility` branch from the reviewed main baseline. Apply the source-only R05 patch; run comparator self-tests; point `R05_OLD_WHEEL` and `R05_NEW_WHEEL` to externally reviewed wheel files; run the read-only comparison; review candidate changes. Do not commit wheel artifacts or change either Governance version. [Procedure](r05/R05_EXTENDED_COMPATIBILITY_SPEC.md).

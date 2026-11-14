@@ -81,3 +81,7 @@ Fresh machines should first run a read-only preflight and install an approved Do
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05 tool deployment note
+
+R05-A needs Python 3.12 standard library, Pytest for local comparator unit tests, and externally supplied wheel ZIPs; it requires no Docker, Azure or cloud credentials. Run inside the `ai_platform_setup_v3` source checkout, emit reports only under ignored `reports/`, and never install either wheel into the base Python environment. [R05 specification](r05/R05_EXTENDED_COMPATIBILITY_SPEC.md).

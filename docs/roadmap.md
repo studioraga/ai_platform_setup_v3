@@ -27,3 +27,7 @@ Every stage requires code, reproducible tests, negative cases, evidence and a se
 ## Verified baseline reference
 
 [Baseline qualification checkpoint](baseline_qualification_checkpoint.md) records the dated Node1 evidence, dependency boundaries, outstanding engineering gates and fresh-machine acceptance limitations.
+
+## R05 implementation start (post-merge `3f429aac`)
+
+Implement R05-A using `scripts/qualification/audit_r05_public_api.py` and `tests/r05/test_public_api_inventory.py` on reviewed external wheel artifacts. The [R05 extended compatibility specification](r05/R05_EXTENDED_COMPATIBILITY_SPEC.md) and [manual review worksheet](r05/R05_REVIEW_CHECKLIST.md) define remaining B–E and independent review gates. No requirement status changes until signed off.
