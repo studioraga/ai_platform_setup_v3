@@ -1,6 +1,6 @@
 # R05 Extended SDK Compatibility — Engineering Specification
 
-**Scope:** `ai_platform_setup_v3`, after approved GitHub baseline `main` merge `3f429aacb889f55521671cb013a73ed5550d90be` (2026-11-14). **State:** R05-A discovery complete in offline analyst fixture; R05-B/C/D/E and independent acceptance **NOT RUN/NOT APPROVED** on the destination host.
+**Scope:** `ai_platform_setup_v3`, after approved GitHub baseline `main` merge `3f429aacb889f55521671cb013a73ed5550d90be` (2026-11-14). **State:** R05-A executed on Node1: 2 comparator tests passed, both seven-case consumer suites passed, and the wheel AST comparison reported six additive modules with no other detected declaration changes. R05-B/C/D/E and independent acceptance remain **NOT RUN/NOT APPROVED**.
 
 ## 1. Baseline and provenance
 
@@ -89,3 +89,8 @@ References: <https://semver.org/spec/v2.0.0.html>; <https://packaging.python.org
 ## 8. Follow-on order
 
 After R05 reaches independent acceptance: R03 OpenAPI compatibility → R09 PostgreSQL RLS/tenant denial → R10 Redis/Qdrant reliability and tenant filtering → R06/R07 evaluated RAG and governed agents → R11–R16 identity, telemetry, CI/CD, architecture and delivery evidence.
+
+
+## Node1 execution evidence
+
+[Node1 R05-A evidence reconciliation](R05_NODE1_AUDIT_20261114.md) records the actual executed static comparison, wheel fingerprints and outstanding acceptance gates.
