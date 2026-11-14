@@ -1,0 +1,54 @@
+name: principal-ai-platform-practice
+services:
+  postgres:
+    image: postgres:17.6
+    restart: 'no'
+    environment:
+      POSTGRES_USER: interview
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run ./create_env.sh}
+      POSTGRES_DB: interview
+    ports:
+      - '127.0.0.1:15432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U interview -d interview']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7.4.5-alpine
+    restart: 'no'
+    ports:
+      - '127.0.0.1:16379:6379'
+    volumes:
+      - redisdata:/data
+      - ./secrets/redis.acl:/run/secrets/redis.acl:ro
+      - ./secrets/redis_password:/run/secrets/redis_password:ro
+    entrypoint: ['/bin/sh', '-ec']
+    # IMPORTANT: sh -ec expects the entire startup script as ONE argument.
+    # A string-valued Compose command can be tokenized into separate argv values.
+    command:
+      - >-
+        cp /run/secrets/redis.acl /tmp/redis.acl &&
+        chown redis:redis /tmp/redis.acl &&
+        chmod 600 /tmp/redis.acl &&
+        exec docker-entrypoint.sh redis-server --appendonly yes --aclfile /tmp/redis.acl
+    healthcheck:
+      test: ['CMD-SHELL', 'REDISCLI_AUTH="$$(cat /run/secrets/redis_password)" redis-cli ping | grep -qx PONG']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  qdrant:
+    image: qdrant/qdrant:v1.15.4
+    restart: 'no'
+    ports:
+      - '127.0.0.1:16333:6333'
+    volumes:
+      - qdrantdata:/qdrant/storage
+    environment:
+      QDRANT__SERVICE__API_KEY: ${QDRANT_API_KEY:?Run ./create_env.sh}
+volumes:
+  pgdata:
+  redisdata:
+  qdrantdata:

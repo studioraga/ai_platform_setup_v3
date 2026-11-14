@@ -1,0 +1,17 @@
+ID,JD_requirement,source_evidence,required_local_artifact,gap_drill,initial_source_status,live_host_status,artifact_path,acceptance_result,notes
+R01,Principal IC architecture and standards,Form8825 + governance M29,"ADR with trade-offs, blast radius, owner",Multi-tenant redesign,PARTIAL,NOT_RUN,,PENDING,
+R02,Python fundamentals,Form8825 + governance Python code,"venv, python tests, failure cases",file streaming + threads,PARTIAL,NOT_RUN,,PENDING,
+R03,FastAPI/OpenAPI/compatibility,Form8825 API/snapshot,OpenAPI diff and consumer tests,contract versioning,PARTIAL,NOT_RUN,,PENDING,
+R04,React,Form8825 React/Playwright,"npm ci, build, UI smoke","keyset table, abort, conflicts",PARTIAL,NOT_RUN,,PENDING,
+R05,SDK packaging,M29 annotated Git tag v0.29.0 and corrected M30 snapshot-based v0.30.0 wheels,"wheel, twine, clean import",SemVer + consumer tests,PARTIAL,NOT_RUN,reports/r05-sdk-compatibility/compatibility_review.md,PENDING,Historical and current wheels verified; static API delta identifies six M30 additions; shared-consumer contracts are executed separately. Full public API/SemVer compatibility and independent acceptance remain open.
+R06,GenAI/RAG evaluations,Prior Node1 context only,"gold dataset, measurements",retrieval faithfulness injection,GAP,NOT_RUN,,PENDING,
+R07,Agent governance,Governance source,approval/authorization negative cases,tool injection and replay,PARTIAL,NOT_RUN,,PENDING,
+R08,Azure/AWS/IaC,No cloud deployment in provided source,CLI + Terraform plan + diagram,AKS vs App Service tradeoffs,GAP,NOT_RUN,,PENDING,
+R09,PostgreSQL multi-tenancy,SQLite ORM only,EXPLAIN + isolation tests,keyset RLS pool fairness,GAP,NOT_RUN,,PENDING,
+R10,NoSQL/vector,Prior RAG context only,local Redis/Qdrant smoke + vector test,embedding rollover and isolation,GAP,NOT_RUN,,PENDING,
+R11,OAuth2 OIDC JWT secrets,API-key RBAC and policies,JWT and tenant negative tests,"JWKS rotation, cross-tenant",GAP,NOT_RUN,,PENDING,
+R12,OTel SLI/SLO,"Application metrics, correlation",trace + metrics + SLO definition,incident observation,PARTIAL,NOT_RUN,,PENDING,
+R13,CI/CD and quality tools,Tests and governance workflows,pytest ruff mypy lock CI run,rollback and flaky tests,PARTIAL,NOT_RUN,,PENDING,
+R14,AI coding assistant rollout,No measured productivity in source,paired-task comparison + policy,human review and leakage prevention,GAP,NOT_RUN,,PENDING,
+R15,Business→technical translation,Review and governance design,requirement acceptance/cost/risks,exec communication ADR,PARTIAL,NOT_RUN,,PENDING,
+R16,Credentials and contract conditions,No mandated list in supplied JD,"recruiter clarification, CV mapping",certification only if required,GAP,NOT_RUN,,PENDING,
