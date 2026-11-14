@@ -2,8 +2,8 @@
 
 | Item | Version 0.29 evidence | Version 0.30 evidence | Decision | Reviewer |
 |---|---|---|---|---|
-| Wheel provenance / immutable digests | Pending Node1 capture | Pending Node1 capture | PENDING | — |
-| Public API declaration and re-export paths | Not classified | Not classified | PENDING | — |
+| Wheel fingerprint capture / provenance approval | SHA-256 recorded | SHA-256 recorded | Capture PASS; provenance approval PENDING | — |
+| Public API declaration and re-export paths | 1,879 candidate records; unclassified | 1,929 candidate records; unclassified | Discovery PASS; supported-surface review PENDING | — |
 | Class/instance methods and signatures | AST candidate inventory | AST candidate inventory | PENDING | — |
 | Dataclass fields / serialization and JSON | Seven-test seed only | Seven-test seed only | PENDING | — |
 | Exceptions and negative auth / replay | Seven-test seed only | Seven-test seed only | PENDING | — |

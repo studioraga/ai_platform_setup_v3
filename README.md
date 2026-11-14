@@ -58,3 +58,7 @@ R05: both Governance v0.29.0 and corrected v0.30.0 wheel consumers previously pa
 ## R05 post-baseline engineering increment
 
 [R05 extended SDK compatibility engineering specification](docs/r05/R05_EXTENDED_COMPATIBILITY_SPEC.md) defines phase-by-phase static API inventory, public-export review, dual-wheel runtime contracts, serialization/exception/denial tests and a **proposed** pre-1.0 policy requiring owner approval. Do not treat R05-A discovery results as final compatibility or production authorization.
+
+## R05-B public API review checkpoint
+
+The R05 discovery branch includes the pushed `590468d` candidate-export increment; two inventories contain 1,879 (v0.29) and 1,929 (v0.30) **unapproved** static candidates. Follow [R05-B/C review plan](docs/r05/R05_BC_REVIEW_PLAN.md) for triage, documented export classification and isolated wheel runtime probes. No `main` merge or R05 sign-off is implied.

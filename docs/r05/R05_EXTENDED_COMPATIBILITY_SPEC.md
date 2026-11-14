@@ -1,6 +1,6 @@
 # R05 Extended SDK Compatibility — Engineering Specification
 
-**Scope:** `ai_platform_setup_v3`, after approved GitHub baseline `main` merge `3f429aacb889f55521671cb013a73ed5550d90be` (2026-11-14). **State:** R05-A executed on Node1: 2 comparator tests passed, both seven-case consumer suites passed, and the wheel AST comparison reported six additive modules with no other detected declaration changes. R05-B/C/D/E and independent acceptance remain **NOT RUN/NOT APPROVED**.
+**Scope:** `ai_platform_setup_v3`, after approved GitHub baseline `main` merge `3f429aacb889f55521671cb013a73ed5550d90be` (2026-11-14). **State:** R05-A executed on Node1: 2 comparator tests passed, both seven-case consumer suites passed, and the wheel AST comparison reported six additive modules with no other detected declaration changes. R05-B candidate discovery executed on Node1 (1,879 / 1,929 records); supported-public classification and R05-C/D/E independent acceptance remain **NOT APPROVED**.
 
 ## 1. Baseline and provenance
 
@@ -77,8 +77,8 @@ References: <https://semver.org/spec/v2.0.0.html>; <https://packaging.python.org
 
 | Gate | Evidence required | Current decision |
 |---|---|---|
-| A Static inventory | Wheel digests, AST diff, comparator self-tests | Analyst fixture PASS, Node1 rerun pending |
-| B Public API classification | Documented exports, re-exports, method contract review | NOT RUN |
+| A Static inventory | Wheel digests, AST diff, comparator self-tests | Node1 PASS (limited static discovery) |
+| B Public API classification | Documented exports, re-exports, method contract review | Static candidate discovery complete; classification NOT APPROVED |
 | C Dual-wheel runtime | Same expanded contracts in both isolated environments | 7 historical tests PASS; expansion NOT RUN |
 | D Behavioral negative cases | Serialization, exception, authorization/refusal and replay evidence | PARTIAL historical tests only |
 | E Version policy | Maintainer-approved pre-1.0 contract and breaking-change disposition | NOT APPROVED |
@@ -94,3 +94,7 @@ After R05 reaches independent acceptance: R03 OpenAPI compatibility → R09 Post
 ## Node1 execution evidence
 
 [Node1 R05-A evidence reconciliation](R05_NODE1_AUDIT_20261114.md) records the actual executed static comparison, wheel fingerprints and outstanding acceptance gates.
+
+## R05-B/C reviewable next increment
+
+[R05-B/C review and probe plan](R05_BC_REVIEW_PLAN.md) defines an unapproved candidate triage, explicit shared-test import seed, separate dual-consumer runtime import/signature probe, and the remaining D/E/independent gates. Do not import the runtime probe into the AST-only qualification stage.

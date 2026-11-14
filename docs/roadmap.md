@@ -31,3 +31,7 @@ Every stage requires code, reproducible tests, negative cases, evidence and a se
 ## R05 implementation start (post-merge `3f429aac`)
 
 Implement R05-A using `scripts/qualification/audit_r05_public_api.py` and `tests/r05/test_public_api_inventory.py` on reviewed external wheel artifacts. The [R05 extended compatibility specification](r05/R05_EXTENDED_COMPATIBILITY_SPEC.md) and [manual review worksheet](r05/R05_REVIEW_CHECKLIST.md) define remaining B–E and independent review gates. No requirement status changes until signed off.
+
+## R05-B current checkpoint (2026-11-14)
+
+`590468d` pushed the static candidate exporter. Node1 generated 1,879/1,929 candidate rows (both qualified=false). [R05-B/C review plan](r05/R05_BC_REVIEW_PLAN.md) stages documentation/alias review before runtime import/signature probing. All R05 requirement-level approvals remain open.
