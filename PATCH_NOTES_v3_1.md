@@ -1,0 +1,11 @@
+# v3.1 corrections from Nov 11 logs
+- ShellCheck SC1091 install_base: annotate sourced host `/etc/os-release` as external.
+- ShellCheck SC2086 preflight: replace `set -- $item` with `read -r -a argv`, keeping command arguments as an array.
+- ShellCheck SC2034 smoke: replace unused loop variable with referenced attempt counter.
+- ShellCheck SC1091 smoke: annotate sourced generated `.env` specifically.
+- ShellCheck SC2015 original inventory: replace `git status && ... || ...` with explicit conditional.
+- Introduce `scripts/validate_source.sh` with strict failure propagation.
+- Phase C test passed on Node1: 5 tests, Ruff/Black PASS; one upstream Starlette TestClient deprecation warning remains. Avoid modifying Starlette internals.
+- Preserve existing v3.0 reports and local `.venv`; v3.1 archive is a CLEAN SOURCE, not a replacement for installed dependencies.
+- Improve evidence template version; include explicit Playwright E2E file generator; more report filenames in allowlist.
+- Further constraints: v3 `verify_python.sh` overwrites generated practice files on rerun; `verify_react.sh` may overwrite App.test.tsx. Back up custom work before re-executing.

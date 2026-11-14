@@ -1,0 +1,57 @@
+# Private runtime/configuration
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+# Runtime, evidence, snapshots and downloaded install media
+reports/
+source-verification/
+patches/
+backups/
+backup_pre_*/
+section1_qualification_correction/
+.venvs/
+.venv/
+venv/
+node_modules/
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/dist/
+**/build/
+**/test-results/
+**/*.egg-info/
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/tfplan
+**/openapi.generated.json
+*.pyc
+*.log
+*.tar.gz
+*.zip
+# Preserve labs source, React lockfile, Terraform and Helm templates
+# (do not ignore labs/)
+
+# Additional Node1-only artifacts uncovered during pre-commit audit
+backup_*/
+backup*/
+*.pre-*
+*.before-*
+*.bak
+*.orig
+labs/cloud-tool-install/
+*.whl
+*.tar
+*.tgz
+*.deb
+*.rpm
+**/coverage/
+**/playwright-report/
