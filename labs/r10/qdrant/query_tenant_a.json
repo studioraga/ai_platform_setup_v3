@@ -1,0 +1,15 @@
+{
+  "query": [1.0, 0.0],
+  "filter": {
+    "must": [
+      {
+        "key": "tenant_id",
+        "match": {
+          "value": "tenant_a"
+        }
+      }
+    ]
+  },
+  "limit": 4,
+  "with_payload": true
+}

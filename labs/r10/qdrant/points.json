@@ -1,0 +1,36 @@
+{
+  "points": [
+    {
+      "id": 101,
+      "vector": [1.0, 0.0],
+      "payload": {
+        "tenant_id": "tenant_a",
+        "document_id": "a-001"
+      }
+    },
+    {
+      "id": 102,
+      "vector": [0.9, 0.1],
+      "payload": {
+        "tenant_id": "tenant_a",
+        "document_id": "a-002"
+      }
+    },
+    {
+      "id": 201,
+      "vector": [1.0, 0.0],
+      "payload": {
+        "tenant_id": "tenant_b",
+        "document_id": "b-001"
+      }
+    },
+    {
+      "id": 202,
+      "vector": [0.9, 0.1],
+      "payload": {
+        "tenant_id": "tenant_b",
+        "document_id": "b-002"
+      }
+    }
+  ]
+}

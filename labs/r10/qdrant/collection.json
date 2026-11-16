@@ -1,0 +1,6 @@
+{
+  "vectors": {
+    "size": 2,
+    "distance": "Cosine"
+  }
+}
